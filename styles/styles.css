@@ -9,6 +9,31 @@
   --footer-color: #2f303a;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
@@ -17,13 +42,17 @@ body {
   color: var(--main-text-color);
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* outline: 1px solid red; */
+}
+
 .header-logo,
 .footer-logo {
   text-decoration: none;
-}
-
-.list {
-  list-style: none;
 }
 
 .link {
@@ -33,6 +62,10 @@ body {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+}
+
+section {
+  padding: 94px 0;
 }
 
 address {
@@ -54,11 +87,48 @@ address {
 
 /* --------------------------------header------------------------------- */
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-nav .header-item + .header-item {
+  margin-left: 50px;
+}
+
+.header-contacts {
+  display: flex;
+}
+
+.header-nav .link {
+  display: block;
+  padding: 32px 0;
+}
+
+.tel {
+  margin-left: 50px;
+}
+
 .header-link {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  display: block;
+  padding: 32px 0;
 }
 
 .current {
@@ -72,6 +142,7 @@ address {
   font-size: 26px;
   line-height: 1.19;
   color: var(--black-color);
+  margin-right: 93px;
 }
 
 .logo-web {
@@ -87,6 +158,8 @@ address {
 
 .hero {
   background-color: var(--footer-color);
+  padding: 200px;
+  text-align: center;
 }
 
 .hero-title {
@@ -97,6 +170,9 @@ address {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  width: 700px;
+  margin-bottom: 30px;
+  margin-left: 255px;
 }
 
 .hero-btn {
@@ -104,13 +180,12 @@ address {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-text-color);
   background-color: var(--accent-color);
-  cursor: pointer;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
 }
 
 .hero-btn:hover,
@@ -120,11 +195,24 @@ address {
 
 /* --------------------------------excell------------------------------- */
 
+.excell-list {
+  display: flex;
+}
+
+.excell-list-box {
+  max-width: 270px;
+}
+
+.excell-list-box:not(:last-child) {
+margin-right: 30px;
+}
+
 .excell-sub-title {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .excell-text {
@@ -140,10 +228,12 @@ address {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .about-list {
   display: flex;
+  margin-left: -30px;
 }
 .about-imgs {
   margin-left: 30px;
@@ -156,11 +246,14 @@ address {
 
 .team-list {
   display: flex;
+  margin-left: -30px;
 }
 
 .team-card {
   background-color: var(--white-color);
   margin-left: 30px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 0px #E0DFE5;
 }
 
 .team-title {
@@ -168,6 +261,7 @@ address {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .team-name {
@@ -175,6 +269,8 @@ address {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team-prof {
@@ -182,6 +278,7 @@ address {
   line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
+  margin-bottom: 30px;
 }
 
 /* --------------------------------footer------------------------------- */
